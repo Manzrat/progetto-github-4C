@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatti | Studio Fotografico</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:linear-gradient(135deg, #111, #2b2b2b);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px 20px;
+    }
+
+    .contact-box{
+      background:white;
+      width:100%;
+      max-width:700px;
+      padding:50px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .contact-box h1{
+      text-align:center;
+      margin-bottom:15px;
+      color:#111;
+    }
+
+    .contact-box p{
+      text-align:center;
+      color:#666;
+      margin-bottom:40px;
+    }
+
+    .form-group{
+      margin-bottom:25px;
+    }
+
+    label{
+      display:block;
+      margin-bottom:8px;
+      font-weight:bold;
+      color:#333;
+    }
+
+    input,
+    select,
+    textarea{
+      width:100%;
+      padding:15px;
+      border:1px solid #ccc;
+      border-radius:10px;
+      font-size:1rem;
+      transition:0.3s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus{
+      border-color:#111;
+      outline:none;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+
+    textarea{
+      resize:vertical;
+      min-height:150px;
+    }
+
+    button{
+      width:100%;
+      padding:15px;
+      border:none;
+      background:#111;
+      color:white;
+      font-size:1rem;
+      border-radius:10px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#333;
+    }
+
+    @media(max-width:768px){
+      .contact-box{
+        padding:30px;
+      }
+
+      .contact-box h1{
+        font-size:2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-box">
+
+    <h1>Contattaci</h1>
+
+    <p>
+      Raccontaci il tuo progetto e richiedi un preventivo personalizzato.
+    </p>
+
+    <form>
+
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="servizio">Tipo di Servizio</label>
+
+        <select id="servizio" name="servizio" required>
+          <option value="">-- Seleziona un servizio --</option>
+          <option value="ritratti">Ritratti</option>
+          <option value="eventi">Eventi Aziendali</option>
+          <option value="matrimoni">Matrimoni</option>
+          <option value="altro">Altro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="messaggio">Messaggio</label>
+
+        <textarea
+          id="messaggio"
+          name="messaggio"
+          placeholder="Scrivi qui il tuo messaggio..."
+          required></textarea>
+      </div>
+
+      <button type="submit">Invia Richiesta</button>
+
+    </form>
+
+  </div>
+
+</body>
+</html>
